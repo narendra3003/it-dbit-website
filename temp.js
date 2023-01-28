@@ -169,7 +169,7 @@ nav.innerHTML = `<div class="container-fluid">
                   <li>
                     <a
                       class="dropdown-item"
-                      href="/placement&internship/placement.html"
+                      href="https://placement.dbit.in/placement-records.html"
                       >Placement Record</a
                     >
                   </li>
