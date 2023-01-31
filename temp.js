@@ -28,8 +28,8 @@ nav.innerHTML = `<div class="container-fluid">
                 <a class="nav-link top-nav-text" href="http://dbitlrc.dbit.in/">Library</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link top-nav-text" href="https://dbcldrive.dbit.in/"
-                  >DBCL Drive</a
+                <a class="nav-link top-nav-text" href="https://workshop.opensourcetutorials.in/"
+                  >Aspire</a
                 >
               </li>
             </ul>
