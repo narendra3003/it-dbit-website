@@ -37,7 +37,7 @@ nav.innerHTML = `<div class="container-fluid">
         </nav>
       </div>
       <div class="row">
-        <img class="p-0" src="/assets/final.jpg" alt="" srcset="" />
+        <img class="p-0" src="/assets/final.webp" alt="" srcset="" />
       </div>
     </div>
 
