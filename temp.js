@@ -92,7 +92,7 @@ nav.innerHTML = `<div class="container-fluid">
                   </li>
                   <li><a class="dropdown-item" href="https://dbit.in/timetable.html">Exam Timetable</a></li>
                   <li><a class="dropdown-item" href="/academics/timetable.html">Timetable</a></li>
-                  <li><a class="dropdown-item" href="https://dbit.in/syllabus.html">Syllabus</a></li>
+                  <li><a class="dropdown-item" href="/academics/academic_syllabus.html">Syllabus</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown text-center">
