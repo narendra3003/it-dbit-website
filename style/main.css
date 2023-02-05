@@ -56,11 +56,11 @@
     border-color: white !important;
 }
 
-.email_links{
+.email_links , .links {
     color: #333;
     text-decoration: none;
 
 }
-.email_links:hover{
+.email_links:hover , .links:hover {
     color: #167718;
 }
