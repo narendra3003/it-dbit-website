@@ -64,3 +64,53 @@
 .email_links:hover , .links:hover {
     color: #167718;
 }
+
+.breadcrumb-classic.list-breadcrumb {
+	display: inline-block;
+	padding: 12px 15px 10px;
+	font-size: 12px;
+	background-color: #19d45b;
+}
+
+.breadcrumb-classic .list-breadcrumb a {
+	color: rgb(6, 5, 5);
+    
+}
+
+.breadcrumb-classic .list-breadcrumb>li {
+	margin-left: 7px;
+	display: inline-block;
+	letter-spacing: .15em;
+	text-transform: uppercase;
+	color: rgb(20, 17, 17);
+    
+}
+
+.breadcrumb-classic .list-breadcrumb>li+li:before {
+	content: '/';
+	margin-right: 9px;
+	color: rgba(2, 2, 3, 0.2);
+}
+
+@media (min-width: 480px) {
+	.breadcrumb-classic .list-breadcrumb {
+		padding: 12px 22px 10px;
+        letter-spacing: .340em;
+        margin-left: 12px;
+        margin-right: 15px;
+	}
+
+}
+
+.shell, .shell-wide {
+    min-width: 1225px;
+    max-width: 1225px;
+    background-color:#21d661;
+}
+.shell, .shell-wide, .shell-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
