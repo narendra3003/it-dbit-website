@@ -72,6 +72,9 @@ footer.innerHTML =
                         ><i class="bi bi-facebook footer-icon" ></i
                      ></a>
                      <a style="padding: 2px;" class="text-light" href="https://twitter.com/dbit_mumbai" target="_blank"
+                     ><i class="bi bi-twitter footer-icon"></i
+                   ></a>
+                   <a style="padding: 2px;" class="text-light" href="https://www.youtube.com/@donboscoinstituteoftechnol8430" target="_blank"
                      ><i class="bi bi-youtube footer-icon"></i
                    ></a>
                    <a style="padding:2px" class="text-light" href="https://www.instagram.com/dbitofficial_mumbai/" target="_blank"
