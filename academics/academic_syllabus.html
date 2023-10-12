@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<!-- &#10004; => ✔️ &#10006; => ❌ -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PSDSNMD822"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- &#10004; => ✔️ &#10006; => ❌ -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PSDSNMD822"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-PSDSNMD822');
-</script>
+    gtag('config', 'G-PSDSNMD822');
+  </script>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">    
-    <link rel="stylesheet" href="../style/main.css">
-    <link rel="stylesheet" href="../style/nav.css">
-    <link rel="stylesheet" href="academics.css">
-    <link rel="stylesheet" href="/style/footer.css">
-    <title>Academic syllabus</title>
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script defer src="/nav.js"></script>
-    <script src="/temp.js" defer></script>
-    <!-- Favicon logo -->
-    <link rel="icon" href="/assets/logo.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="stylesheet" href="../style/nav.css">
+  <link rel="stylesheet" href="academics.css">
+  <link rel="stylesheet" href="/style/footer.css">
+  <title>Academic syllabus</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script defer src="/nav.js"></script>
+  <script src="/Components/Navbar.js" defer></script>
+  <!-- Favicon logo -->
+  <link rel="icon" href="/assets/logo.ico" type="image/x-icon">
 </head>
+
 <body class="bg-color">
-  <div id = "navbar"></div>
+  <div id="navbar"></div>
   <!-- <section class ="breadcrumb-classic">
     <div class="shell">
         <ul class ="list-breadcrumb">
@@ -46,56 +51,57 @@
   <main class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-md-8 p-0">
-          <div class="row border my-3 mx-4 py-3 rounded bg-light">
-              
-            <table class="table text-center">
-              <thead class="table-dark">
-                <tr>
-                  <th>Year</th>
-                  <th>Timetable</th>
-                </tr>
-              </thead> 
-              <!-- https://fe.dbit.in/academics/academic_syllabus.html -->
-              <tbody>
-                <tr class="bg-white">
-                  <th>Sem 1 and Sem 2</th>
-                  <td><a class="links" href="https://fe.dbit.in/academics/academic_syllabus.html">View Syllabus</a></td>
-                </tr>
-                <tr class="bg-color">
-                  <th>Sem 3</th>
-                  <td><a class="links" href="/assets/pdf/syllabus/SEMIII.pdf">View Syllabus</a></td>
-                </tr>
-                <tr class="bg-white">
-                  <th>Sem 4</th>
-                  <td><a class="links" href="/assets/pdf/syllabus/SEMIV.pdf">View Syllabus</a></td>
-                </tr>
-                <tr class="bg-color">
-                  <th>Sem 5</th>
-                  <td><a class="links" href="/assets/pdf/syllabus/SEMV.pdf">View Syllabus</a></td>
-                </tr>
-                <tr class="bg-white">
-                  <th>Sem 6</th>
-                  <td><a class="links" href="/assets/pdf/syllabus/SEMVI.pdf">View Syllabus</a></td>
-                </tr>
-                <tr class="bg-color">
-                  <th>Sem 7</th>
-                  <td><a class="links" href="#">View Syllabus</a></td>
-                </tr>
-                <tr class="bg-white">
-                  <th>Sem 8</th>
-                  <td><a class="links" href="#">View Syllabus</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="row border my-3 mx-4 py-3 rounded bg-light">
+
+          <table class="table text-center">
+            <thead class="table-dark">
+              <tr>
+                <th>Year</th>
+                <th>Timetable</th>
+              </tr>
+            </thead>
+            <!-- https://fe.dbit.in/academics/academic_syllabus.html -->
+            <tbody>
+              <tr class="bg-white">
+                <th>Sem 1 and Sem 2</th>
+                <td><a class="links" href="https://fe.dbit.in/academics/academic_syllabus.html">View Syllabus</a></td>
+              </tr>
+              <tr class="bg-color">
+                <th>Sem 3</th>
+                <td><a class="links" href="/assets/pdf/syllabus/SEMIII.pdf">View Syllabus</a></td>
+              </tr>
+              <tr class="bg-white">
+                <th>Sem 4</th>
+                <td><a class="links" href="/assets/pdf/syllabus/SEMIV.pdf">View Syllabus</a></td>
+              </tr>
+              <tr class="bg-color">
+                <th>Sem 5</th>
+                <td><a class="links" href="/assets/pdf/syllabus/SEMV.pdf">View Syllabus</a></td>
+              </tr>
+              <tr class="bg-white">
+                <th>Sem 6</th>
+                <td><a class="links" href="/assets/pdf/syllabus/SEMVI.pdf">View Syllabus</a></td>
+              </tr>
+              <tr class="bg-color">
+                <th>Sem 7</th>
+                <td><a class="links" href="#">View Syllabus</a></td>
+              </tr>
+              <tr class="bg-white">
+                <th>Sem 8</th>
+                <td><a class="links" href="#">View Syllabus</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </main>
 
   <div style="padding: 2rem;"></div>
 
-   <!-- Footer -->    
-   <div id = "footer"></div>
-   <script src="/footer.js"></script>
+  <!-- Footer -->
+  <div id="footer"></div>
+  <script src="/Components/Footer.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,1 @@
+This folder contains all the components that are common between pages and is added via js after rendering initial markup

@@ -3,15 +3,15 @@
 
 <head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PSDSNMD822"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PSDSNMD822"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-PSDSNMD822');
-</script>
+    gtag('config', 'G-PSDSNMD822');
+  </script>
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,9 +26,9 @@
   <title>Web Development Club</title>
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-  </script>
+    </script>
   <script defer src="../nav.js"></script>
-  <script src="../temp.js" defer></script>
+  <script src="/Components/Navbar.js" defer></script>
   <!-- Favicon logo -->
   <link rel="icon" href="/assets/logo.ico" type="image/x-icon">
 </head>
@@ -119,7 +119,8 @@
                 <tr>
                   <th><span style="font-size: 12pt;">Sr. No</span></th>
                   <th>
-                    <span style="font-size: 12pt;">Activity</span></th>
+                    <span style="font-size: 12pt;">Activity</span>
+                  </th>
                   <th><span style="font-size: 12pt;">Date</span></th>
                   <th><span style="font-size: 12pt;">Report</span></th>
                 </tr>
@@ -180,9 +181,9 @@
     </div>
   </main>
   <div style="padding: 2rem;"></div>
-<!-- Footer -->    
-<div id = "footer"></div>
-<script src="/footer.js"></script>
+  <!-- Footer -->
+  <div id="footer"></div>
+  <script src="/Components/Footer.js"></script>
 </body>
 
 </html>
