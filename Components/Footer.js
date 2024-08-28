@@ -88,7 +88,7 @@ footer.innerHTML =
       </section>
       <!-- Section: Links  -->
 
-      <!-- Copyright -->
+      <!-- COpyright -->
       <div class="text-center p-4" style="color:white" >
        © 2021 Copyright :
        <a href="/contributors.html"  class="" style="text-decoration: none; color: white;"> Desgined and Maintained by DBIT Website Maintainance Team</a>
