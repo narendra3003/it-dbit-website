@@ -1,0 +1,46 @@
+/* Slideshow Styling */
+.slide-img {
+    object-fit: cover;
+    height: 500px;
+  }
+  
+  /* Fade-in effect for HOD section */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Scrolling News & Events */
+  .scroll-container {
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .scroll-text {
+    display: flex;
+    flex-direction: column;
+    animation: scrollUp 10s linear infinite;
+  }
+  
+  @keyframes scrollUp {
+    0%, 20% { transform: translateY(0%); }
+    25%, 45% { transform: translateY(-33.33%); }
+    50%, 70% { transform: translateY(-66.66%); }
+    75%, 100% { transform: translateY(0%); }
+  }
+  
+  /* HOD Image */
+  .hod-img {
+    width: 200px;
+    border-radius: 10px;
+  }
+  

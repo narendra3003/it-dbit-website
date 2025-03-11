@@ -9,7 +9,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-PSDSNMD822');
   </script>
 
@@ -20,142 +19,96 @@
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="/style/main.css" />
-  <!-- <link rel="stylesheet" href="/style/footer.css" />
-  <link rel="stylesheet" href="/style/nav.css" /> -->
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="/style/custom.css" /> <!-- New file for animations and styling -->
+  
   <title>DBIT IT</title>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"
     defer></script>
-  <!-- <script src="nav.js" defer></script>
-  <script src="temp.js" defer></script> -->
   <script src="./Components/Navbar.js" defer></script>
   <script src="./Components/Footer.js" defer></script>
-  <!-- Favicon logo -->
+  <script src="./Components/scroll.js" defer></script> <!-- Script for smooth scrolling -->
+
   <link rel="icon" href="/assets/logo.ico" type="image/x-icon">
 </head>
 
 <body class="bg-color">
+
+  <!-- Navbar -->
   <div id="navbar"></div>
+
   <main class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="col-md-12 p-0 justify-content-center">
+    <div class="row">
 
-        <div class="row border rounded my-3 mx-4 py-3 bg-light">
-          <div id="carouselExampleIndicators" class="carousel slide justify-content-center" data-bs-ride="true">
+      <!-- Left Section (70%) -->
+      <div class="col-md-8 p-3">
 
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 0"></button>
+       <!-- Slideshow -->
+<div id="carouselExampleIndicators" class="carousel slide border rounded bg-light" data-bs-ride="carousel" data-bs-wrap="true">
+  <!-- Indicators will be dynamically added by JS -->
+  <div class="carousel-indicators" id="carousel-indicators"></div>
 
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                  aria-label="Slide 1"></button>
+  <div class="carousel-inner" id="carousel-inner">
+    <!-- Slides will be dynamically inserted here -->
+  </div>
 
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                  aria-label="Slide 2"></button>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
 
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                  aria-label="Slide 3"></button>
+<script>
+  // Image sources array
+  const images = [
+  "./assets/slideshow/dbit_it.jpg",
+  "./assets/slideshow/sih-winner-for-website.webp",
+    "./assets/slideshow/1.webp",
+    "./assets/slideshow/2.webp",
+    "./assets/slideshow/3.webp",
+    "./assets/slideshow/4.webp",
+    "./assets/slideshow/sih.webp",
+    "./assets/slideshow/5.webp",
+    "./assets/slideshow/6.webp",
+    "./assets/slideshow/7.webp",
+    "./assets/slideshow/8.webp"
+  ];
 
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                  aria-label="Slide 4"></button>
+  const carouselInner = document.getElementById("carousel-inner");
+  const indicatorsContainer = document.getElementById("carousel-indicators");
 
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
-                  aria-label="Slide 5"></button>
+  images.forEach((src, index) => {
+    // Create slide
+    const slide = document.createElement("div");
+    slide.classList.add("carousel-item");
+    if (index === 0) slide.classList.add("active"); // Make first slide active
 
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
-                  aria-label="Slide 6"></button>
-                
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
-                  aria-label="Slide 7 "></button>
+    slide.innerHTML = `<img src="${src}" class="d-block w-100" style="object-fit: cover; height: 500px" alt="Slide ${index + 1}" />`;
+    carouselInner.appendChild(slide);
 
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"
-                  aria-label="Slide 8 "></button>
+    // Create indicator
+    const indicator = document.createElement("button");
+    indicator.type = "button";
+    indicator.setAttribute("data-bs-target", "#carouselExampleIndicators");
+    indicator.setAttribute("data-bs-slide-to", index);
+    if (index === 0) indicator.classList.add("active"); // First indicator active
+    indicatorsContainer.appendChild(indicator);
+  });
 
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"
-                  aria-label="Slide 9 "></button>
+  // Ensure infinite looping using modulo
+  const carousel = new bootstrap.Carousel(document.getElementById("carouselExampleIndicators"), {
+    interval: 3000, // Auto-slide every 3s
+    wrap: true
+  });
+</script>
 
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10"
-                  aria-label="Slide 10 "></button>
 
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="11"
-                  aria-label="Slide 11 "></button>
-
-            </div>
-
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./assets/slideshow/1.webp" class="d-block w-100" style="object-fit: cover; height: 500px"
-                  alt="..." />
-              </div>
-              <div class="carousel-item">
-                <img src="./assets/slideshow/2.webp" class="d-block w-100" style="object-fit: cover; height: 500px"
-                  alt="..." />
-              </div>
-
-              <div class="carousel-item">
-                <img src="./assets/slideshow/sih-winner-for-website.webp" class="d-block w-100" style="object-fit: cover; height: 500px"
-                  alt="..." />
-              </div>
-
-              <div class="carousel-item">
-                <img src="./assets/slideshow/3.webp" class="d-block w-100" style="object-fit: cover; height: 500px"
-                  alt="..." />
-              </div>
-              <div class="carousel-item">
-                <img src="./assets/slideshow/4.webp" class="d-block w-100" style="object-fit: cover; height: 500px"
-                  alt="..." />
-              </div>
-
-              <div class="carousel-item">
-                <img src="./assets/slideshow/sih.webp" class="d-block w-100" style="object-fit: cover; height: 500px"
-                  alt="..." />
-              </div>
-
-              <div class="carousel-item">
-                <img src="./assets/slideshow/5.webp" class="d-block w-100" style="object-fit: cover; height: 500px"
-                  alt="..." />
-              </div>
-
-              <div class="carousel-item">
-                <img src="./assets/slideshow/dbit_it.jpg" class="d-block w-100" style="object-fit: cover; height: 500px"
-                  alt="..." />
-              </div>
-
-              <div class="carousel-item">
-                <img src="./assets/slideshow/6.webp" class="d-block w-100" style="object-fit: cover; height: 500px"
-                  alt="..." />
-              </div>
-
-              <div class="carousel-item">
-                <img src="./assets/slideshow/7.webp" class="d-block w-100" style="object-fit: cover; height: 500px"
-                  alt="..." />
-
-              <div class="carousel-item">
-                    <img src="./assets/slideshow/8.webp" class="d-block w-100" style="object-fit: cover; height: 500px"
-                      alt="..." />
-              </div>
-            </div>
-
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden"></span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden"></span>
-            </button>
-
-          </div>
-        </div>
-
-        <div class="row border rounded bg-light my-3 mx-4">
-          <div class="col-md-4 text-center p-3">
-            <img src="/assets/hod.webp" width="200px" alt="" srcset="">
+        <!-- HOD Section -->
+        <div class="row border rounded bg-light mt-4 p-4 fade-in">
+          <div class="col-md-4 text-center">
+            <img src="/assets/hod.webp" class="hod-img" alt="HOD Image">
             <h6><strong>Mr. Prasad Padalkar</strong></h6>
             <h6><strong>Head of Department</strong></h6>
             <p>Department of Information Technology</p>
@@ -178,64 +131,45 @@
               activities like coding competitions, special interest clubs, Student Chapters of Professional bodies and
               many more activities which are arranged by the enthusiastic faculty members and students.</p>
             <p><i>Welcome to DBIT - IT and explore the future.</i></p>
-            <p>Mr. Prasad Padalkar</p>
-            <p>Head Of Department</p>
           </div>
         </div>
+
       </div>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 p-0 justify-content-center">
-            <div class="container  py-3" style="z-index: 0">
-              <div class="row border rounded bg-light mx-3 mx-3 justify-content-center">
-                <h3 class="py-3 text-center">News and Events</h3>
-                <div class="scroll-container mb-5">
-                  <div class="scroll-text text-center">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeo4X0tM7l-Uc__glcmLn_YpMLGLAXd6C7LKJ8k8XLBIen7A/viewform" target="" class="nav-link">Synchrony Meet 2024</a>
-                    <a href="https://www.youtube.com/watch?v=PowlKp3s0es" target="" class="nav-link">Alumini Meet 2023</a>
-                    <a href="" target="" class="nav-link">Department Day</a>
-                  </div>
-                </div>  
-              </div>
-      
-              <div class="row border rounded bg-light mt-3 mx-3 justify-content-center" style="height: 300px">
-                <h3 class="py-3 text-center">Flagship Events</h3>
-                <div class="scroll-container mb-5">
-                  <div class="scroll-text text-center">
-                    <a href="https://csi.dbit.in/mumbaiHackathon.html" target="" class="nav-link">Mumbai Hackathon</a>
-                    <a href="https://csi.dbit.in/gameOfCodes.html" target="" class="nav-link">Game of codes</a>
-                    <a href="/cocurricular/innovex.html" target="" class="nav-link">Innovex</a>
-                  </div>
-                </div>
-              </div>
+      <!-- Right Sidebar (30%) -->
+      <div class="col-md-4 p-3">
+
+        <div class="row border rounded bg-light mx-3 mx-3 justify-content-center">
+          <h3 class="py-3 text-center">News and Events</h3>
+          <div class="scroll-container mb-5">
+            <div class="scroll-text text-center">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeo4X0tM7l-Uc__glcmLn_YpMLGLAXd6C7LKJ8k8XLBIen7A/viewform" target="" class="nav-link">Synchrony Meet 2024</a>
+              <a href="https://www.youtube.com/watch?v=PowlKp3s0es" target="" class="nav-link">Alumini Meet 2023</a>
+              <a href="" target="" class="nav-link">Department Day</a>
             </div>
-          </div>
-      
-          <div class="col-md-6 p-0 justify-content-center">
-            <div class="container sticky-top py-3" style="z-index: 0">
-              <div class="row border rounded bg-light mt-3 mx-3 justify-content-center">
-                <h3 class="py-3 text-center">Contact</h3>
-                <p>Department of Information Technology <br>
-                  1st Floor, A Wing <br><br>
-                  Don Bosco Institute Of Technology Premier Automobiles Road, Opp. Fiat Company, Kurla (W), Mumbai- 400 070
-                  <br><br>
-                  Telephone - 022-25042424 / 022-25040508 <br>
-                  Fax - 25040682<br>
-                  Email - dbit@dbit.in
-                </p>
-              </div>
+          </div>  
+        </div>
+
+        <div class="row border rounded bg-light mt-3 mx-3 justify-content-center" style="height: 300px">
+          <h3 class="py-3 text-center">Flagship Events</h3>
+          <div class="scroll-container mb-5">
+            <div class="scroll-text text-center">
+              <a href="https://csi.dbit.in/mumbaiHackathon.html" target="" class="nav-link">Mumbai Hackathon</a>
+              <a href="https://csi.dbit.in/gameOfCodes.html" target="" class="nav-link">Game of codes</a>
+              <a href="/cocurricular/innovex.html" target="" class="nav-link">Innovex</a>
             </div>
           </div>
         </div>
+
       </div>
-      
+
+    </div>
   </main>
   <div style="padding: 2rem;"></div>
 
   <!-- Footer -->
   <div id="footer"></div>
-  </div>
+
 </body>
 
 </html>
