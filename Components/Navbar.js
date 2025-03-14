@@ -18,18 +18,10 @@ nav.innerHTML = `<div class="container-fluid">
                 <a class="nav-link top-nav-text" href="https://alumni.dbit.in/">Alumni</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link top-nav-text" href="https://moodle.dbit.in/">Moodle</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link top-nav-text" href="https://elearn.dbit.in/">E-Learn</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link top-nav-text" href="http://dbitlrc.dbit.in/">Library</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link top-nav-text" href="https://workshop.opensourcetutorials.in/"
-                  >Aspire</a
-                >
               </li>
             </ul>
           </div>
