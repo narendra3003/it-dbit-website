@@ -42,14 +42,13 @@
 
       <!-- Left Section (70%) -->
       <div class="col-md-8 p-3">
-
-       <!-- Slideshow -->
+<!-- Slideshow -->
 <div id="carouselExampleIndicators" class="carousel slide border rounded bg-light" data-bs-ride="carousel" data-bs-wrap="true">
-  <!-- Indicators will be dynamically added by JS -->
+  <!-- Indicators -->
   <div class="carousel-indicators" id="carousel-indicators"></div>
 
   <div class="carousel-inner" id="carousel-inner">
-    <!-- Slides will be dynamically inserted here -->
+    <!-- Slides dynamically inserted here -->
   </div>
 
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -63,17 +62,30 @@
 <script>
   // Image sources array
   const images = [
-  "./assets/slideshow/dbit_it.jpg",
-  "./assets/slideshow/sih-winner-for-website.webp",
-    "./assets/slideshow/1.webp",
-    "./assets/slideshow/2.webp",
-    "./assets/slideshow/3.webp",
-    "./assets/slideshow/4.webp",
-    "./assets/slideshow/sih.webp",
-    "./assets/slideshow/5.webp",
-    "./assets/slideshow/6.webp",
-    "./assets/slideshow/7.webp",
-    "./assets/slideshow/8.webp",
+    "./assets/slideshow/dbit_it.jpg",
+    // "./assets/slideshow/sih-winner-for-website.webp",
+    "./assets/slideshow/1st_Winners_Codeverse.png",
+    "./assets/slideshow/3rd_Winners_Codeverse.png",
+    "./assets/slideshow/tpc/1.png",
+    "./assets/slideshow/tpc/2.png",
+    "./assets/slideshow/tpc/3.png",
+    "./assets/slideshow/tpc/4.png",
+    "./assets/slideshow/tpc/5.png",
+    "./assets/slideshow/tpc/6.png",
+    "./assets/slideshow/tpc/7.png",
+    "./assets/slideshow/tpc/8.png",
+    "./assets/slideshow/tpc/9.png",
+    "./assets/slideshow/tpc/10.png",
+    "./assets/slideshow/tpc/11.png",
+    "./assets/slideshow/tpc/12.png",
+    "./assets/slideshow/tpc/13.png",
+    "./assets/slideshow/tpc/14.png",
+    "./assets/slideshow/tpc/15.png",
+    "./assets/slideshow/tpc/16.png",
+    "./assets/slideshow/tpc/17.png",
+    "./assets/slideshow/tpc/18.png",
+    "./assets/slideshow/tpc/19.png",
+    "./assets/slideshow/tpc/20.png",
     "./assets/slideshow/slider/2.png",
     "./assets/slideshow/slider/3.png",
     "./assets/slideshow/slider/4.png",
@@ -89,9 +101,9 @@
     // Create slide
     const slide = document.createElement("div");
     slide.classList.add("carousel-item");
-    if (index === 0) slide.classList.add("active"); // Make first slide active
+    if (index === 0) slide.classList.add("active"); // First slide active
 
-    slide.innerHTML = `<img src="${src}" class="d-block w-100" style="object-fit: cover; height: 500px" alt="Slide ${index + 1}" />`;
+    slide.innerHTML = `<img src="${src}" class="d-block w-100" style="object-fit: contain; aspect-ratio: 2 / 1;" alt="Slide ${index + 1}" />`;
     carouselInner.appendChild(slide);
 
     // Create indicator
@@ -103,13 +115,12 @@
     indicatorsContainer.appendChild(indicator);
   });
 
-  // Ensure infinite looping using modulo
-  const carousel = new bootstrap.Carousel(document.getElementById("carouselExampleIndicators"), {
+  // Enable auto-slide with wrap
+  new bootstrap.Carousel(document.getElementById("carouselExampleIndicators"), {
     interval: 3000, // Auto-slide every 3s
     wrap: true
   });
 </script>
-
 
         <!-- HOD Section -->
         <div class="row border rounded bg-light mt-4 p-4 fade-in">
@@ -149,9 +160,10 @@
           <h3 class="py-3 text-center">News and Events</h3>
           <div class="scroll-container mb-5">
             <div class="scroll-text text-center">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeo4X0tM7l-Uc__glcmLn_YpMLGLAXd6C7LKJ8k8XLBIen7A/viewform" target="" class="nav-link">Synchrony Meet 2024</a>
-              <a href="https://www.youtube.com/watch?v=PowlKp3s0es" target="" class="nav-link">Alumini Meet 2023</a>
-              <a href="" target="" class="nav-link">Department Day</a>
+              <a href="" target="" class="nav-link">Graduation Ceremony 2025 </a>
+              <a href="" target="" class="nav-link">Alumni Meet  2025  </a>
+              <a href="" target="" class="nav-link">Department  Day 2025   </a>
+              <a href="" target="" class="nav-link">CSI Planner  2025  </a>
             </div>
           </div>  
         </div>
@@ -160,9 +172,7 @@
           <h3 class="py-3 text-center">Flagship Events</h3>
           <div class="scroll-container mb-5">
             <div class="scroll-text text-center">
-              <a href="https://csi.dbit.in/mumbaiHackathon.html" target="" class="nav-link">Mumbai Hackathon</a>
-              <a href="https://csi.dbit.in/gameOfCodes.html" target="" class="nav-link">Game of codes</a>
-              <a href="/cocurricular/innovex.html" target="" class="nav-link">Innovex</a>
+              <a href="/cocurricular/innovex.html" target="" class="nav-link">Innovex 2025</a>
             </div>
           </div>
         </div>
