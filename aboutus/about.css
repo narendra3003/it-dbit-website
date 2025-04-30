@@ -21,3 +21,76 @@ th, td {
 }
   
 tr:nth-child(even) {background-color: #f2f2f2;}
+
+/* Vision-Mission Section Container */
+.vision-mission-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  
+  /* Base container for sections */
+.section-container {
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  
+  /* Reusable modern box styling */
+  .modern-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #000000;
+  }
+  
+  /* Hover effect */
+  .modern-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Headings */
+  .modern-box h4,
+  .modern-box h5 {
+    color: #9d4edd;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  /* Text and lists */
+  .modern-box ul,
+  .modern-box ol {
+    padding-left: 1.2rem;
+  }
+  
+  .modern-box li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Flex Layout for Paired Sections */
+  .flex-pair {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  
+  .flex-pair > .modern-box {
+    flex: 1 1 48%;
+  }
+  
+  /* Responsive fallback */
+  @media (max-width: 768px) {
+    .flex-pair > .modern-box {
+      flex: 1 1 100%;
+    }
+  }
+  
