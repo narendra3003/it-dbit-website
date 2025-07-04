@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -30,6 +30,142 @@
   <script src="./Components/scroll.js" defer></script> <!-- Script for smooth scrolling -->
 
   <link rel="icon" href="/assets/logo.ico" type="image/x-icon">
+
+  <style>
+    @keyframes blinkBlueGold {
+      0%, 100% { color: #FFD700; }
+      50% { color: #007bff; }
+    }
+    .blink-blue-gold {
+      animation: blinkBlueGold 1s infinite;
+    }
+    /* Smooth vertical scroll for sidebar news/events */
+    .scroll-container {
+      position: relative;
+      height: calc(100% - 56px);
+      overflow: hidden;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+    .scroll-viewport {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .scroll-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: verticalScroll 12s linear infinite;
+      will-change: transform;
+    }
+    .scroll-text.paused {
+      animation-play-state: paused !important;
+    }
+    @keyframes verticalScroll {
+      0% { transform: translateY(100%); }
+      100% { transform: translateY(-100%); }
+    }
+    .about-us-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      min-height: 220px;
+      padding: 1.5rem 1rem;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .about-us-card .card-title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #1a237e;
+      margin-bottom: 1rem;
+    }
+    .about-us-card .card-text {
+      text-align: justify;
+      font-size: 1.05rem;
+      color: #333;
+    }
+    .highlights-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+      min-height: 220px;
+      padding: 2.5rem 2.2rem;
+      background: #148a51;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      position: relative;
+      overflow: hidden;
+    }
+    .highlights-card .card-title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      text-align: left;
+      width: 100%;
+    }
+    .highlights-card p.bullet {
+      position: relative;
+      padding-left: 1.7em;
+      margin-bottom: 0.7rem;
+      margin-top: 0;
+      color: #FFFFFF;
+      text-align: left;
+      font-size: 1.05rem;
+    }
+    .highlights-card p.bullet::before {
+      content: '\2022';
+      color: #FFFFFF;
+      font-size: 1.5em;
+      position: absolute;
+      left: 0.2em;
+      top: 0.1em;
+      line-height: 1;
+    }
+    .vision-mission-section h4 {
+      color: #FFFFFF;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+    .vision-mission-section h4 .bi {
+      font-size: 1.3em;
+      vertical-align: middle;
+    }
+    .vision-mission-section .card-text {
+      color: #fff;
+      font-size: 1.05rem;
+      text-align: left;
+      margin-bottom: 1.2rem;
+      margin-top: 0;
+      padding-left: 0.5em;
+    }
+    .highlights-card::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border: 6px solid #fff;
+      border-radius: 12px;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .highlights-card > * {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
 </head>
 
 <body class="bg-color">
@@ -43,7 +179,7 @@
       <!-- Left Section (70%) -->
       <div class="col-md-8 p-3">
 <!-- Slideshow -->
-<div id="carouselExampleIndicators" class="carousel slide border rounded bg-light" data-bs-ride="carousel" data-bs-wrap="true">
+<div id="carouselExampleIndicators" class="carousel slide border rounded bg-light mb-4" data-bs-ride="carousel" data-bs-wrap="true">
   <!-- Indicators -->
   <div class="carousel-indicators" id="carousel-indicators"></div>
 
@@ -87,6 +223,7 @@
     "./assets/slideshow/tpc/19.png",
     "./assets/slideshow/tpc/20.png",
     "./assets/slideshow/tpc/21.png",
+    "./assets/slideshow/tpc/placement2026_01.png",
     "./assets/slideshow/slider/2.png",
     "./assets/slideshow/slider/3.png",
     "./assets/slideshow/slider/4.png",
@@ -123,62 +260,143 @@
   });
 </script>
 
-        <!-- HOD Section -->
-        <div class="row border rounded bg-light mt-4 p-4 fade-in">
-          <div class="col-md-4 text-center">
-            <br><br><br><br><br>
-            <img src="/assets/hod.JPG" class="hod-img" alt="HOD Image">
-            <h6><strong>Prof. Sunantha Guruswamy</strong></h6>
-            <h6><strong>Head of Department</strong></h6>
-            <p>Department of Information Technology</p>
-            <p>sunantha@dbit.in</p>
-            <p>022-25042424 / 25040508</p>
-          </div>
-          <div class="col-md-8">
-            <h4 class="text-center pt-3">HOD’s Message</h4>
-            <p>The ever-changing technology not only impacts the business strategies, product manufacturing, service
-              deliveries but also affects the job roles, expected skills and competencies expected while
-              hiring.Information Technology is rapidly expanding itself to become the ubiquitous branch of engineering
-              and has no domain untouched with the developments in IT. Thus IT engineers are required in all the sectors
-              from coding to large scale Industrial Automation. </p>
-            <p>Industry 4.0 would require knowledge of many different subject areas to work with close interaction with
-              each other. Few of those being Big Data, Cyber Security, Simulation & Modeling, Additive Manufacturing,
-              Cloud Computing, IoT, Augmented reality, Autonomous System & Robotics and System Integration. With the
-              shifting paradigms of IT, we at IT department of Don Bosco Institute of Technology have set goals to
-              develop and prepare our students with the knowledge & skills required for Industry 4.0. These skills set
-              can be achieved by the students through the university curriculum and by participating in co-curricular
-              activities like coding competitions, special interest clubs, Student Chapters of Professional bodies and
-              many more activities which are arranged by the enthusiastic faculty members and students.</p>
-            <p><i>Welcome to DBIT - IT and explore the future.</i></p>
-          </div>
-        </div>
+<!-- About/Why/HOD Section as two columns with parallel cards -->
+<div class="row mb-4">
+  <!-- Left column: two stacked cards -->
+  <div class="col-md-4 d-flex flex-column align-items-center">
+    <!-- Highlights card above HOD card in left column -->
+    <div id="left-highlights-card" class="card mb-4 shadow-sm w-100 highlights-card">
+      <br><br><br><br>
+      <!-- style="color: #1a237e" -->
+      <h4 class="card-title mb-3"> Highlights</h4>
+      <p class="bullet">Intake: 60</p>
+      <p class="bullet">Degree: B.E.</p>
+      <p class="bullet">NAAC<br>Accreditation: 'A'</p>
+      <p class="bullet">Placement Record - 100%</p>
+      <p class="bullet">Academic Results – 100%</p>
+      <p class="bullet">Average Faculty Experience - 15+ yrs</p>
+      <p class="bullet">Holistic Environment</p>
+    </div>
+    <!-- HOD card -->
+    <div id="hod-card" class="modern-box-green w-100 mb-4 text-center d-flex flex-column align-items-center justify-content-center" style="width: 100%;">
+      <img src="/assets/hod.JPG" class="hod-img mb-3" alt="HOD Image">
+      <h6><strong>Prof. Sunantha Guruswamy</strong></h6>
+      <h6><strong>Head of Department</strong></h6>
+      <p>Department of Information Technology</p>
+      <p>sunantha@dbit.in</p>
+      <p>022-25042424 / 25040508</p>
+    </div>
+  </div>
+  <!-- Right column: two stacked cards -->
+  <div class="col-md-8 d-flex flex-column align-items-center">
+    <!-- About IT Department Card -->
+    <div id="aboutit-card" class="custom-card framed-card mb-4" style="width: 100%;">
+      <div class="card-content">
+        <h4 class="card-title text-center mb-3"><i class="bi bi-info-circle-fill"></i> About IT Department</h4>
+        <p class="card-text">
+          The Department of Information Technology was established in 2001 to cater to the growing demands of technically sound professionals in the IT industry. This program is accredited by the National Board of Accreditation with effect from the Academic Year 2019-2024.
+        </p>
+        <p class="card-text">
+          Initially, it started with just 30 seats in the first academic year. However, in the following years, the total intake is 60 seats per year. The department has qualified senior faculty with the state of holistic, socially conscious to facilitate efficient teaching learning process.
+        </p>
+        <p class="card-text">
+          The department is headed by (Mrs.) Sunantha Guruswamy. Currently, there are 08 faculty members in Information Technology. The department has six well equipped computer labs with the latest computer systems, with open-source software, and an internet facility through a good broadband wifi system.
+        </p>
+        <p class="card-text">
+          All classrooms & labs are well-resourced with amenities such as projector, internet facility. The department has consistently achieved 96% results in academics and with 5% students always above 95%, 93%, 92% in BE, TE, SE respectively.
+        </p>
+        <p class="card-text">
+          Also, 70% placement, 25% for higher education with >60 % undergoing internship on weekdays placements is done with companies like CapGemini, Accenture, E&Y, TCS and more.
+        </p>
+      </div>
+    </div>
+    <!-- Why Choose IT/DBIT Card -->
+    <div id="whyit-card" class="custom-card mb-4" style="width: 100%;">
+      <div class="card-content">
+        <h4 class="card-title text-center mb-3"><i class="bi bi-star-fill"></i> Why Choose IT @ DBIT?</h4>
+        <p>
+          The Information Technology department at Don Bosco Institute of Technology is the most coveted branch in Mumbai and in Western countries. It is one of the joint/ twin branches of the computer engineering branch. It is one of the core branches for students interested in pursuing engineering degree and getting placed in IT firms in various functional and non functional roles in Computers. Specializations, such as Business analyst, Data Scientist, Artificial Intelligence, IoT, Security need fundamental and sound knowledge of Computer and technology. An IT engineer graduating from this department will be equipped with this fundamental knowledge and thereafter can choose a career in any of the specializations one is interested in. The curriculum of mumbai university mapps in such a way that the student is aware of current prevailing technologies at the pro level of the current technologies required to switch over the specializations to a certain extent. Students who like technology, statistics, algorithms and design or have a logical approach to understand the requirement and implement the coding can get chosen and can be a perfect fit in this branch very easily. Students with IT degrees have prospects all around the world. Students interested in Placements have a good scope of getting a job in good renowned companies and our placement history speaks a lot about it . The department holds a record of at least 20% of the students who opt and succeed in higher studies in India and abroad, getting admissions for master's in computer engineering  or IT, Master in technology  and master of science  in IIT, IISCs as well as universities in UK/US/Canada/Europe and etc.
+
+
+        </p>
+        <p class="text-center fw-bold mt-3">
+          <i>Welcome to the IT Department at DBIT — where future-ready engineers are made.</i>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Ensure left cards match the height of their right-side counterparts
+function matchCardHeights() {
+  var aboutIt = document.getElementById('aboutit-card');
+  var whyIt = document.getElementById('whyit-card');
+  var empty = document.getElementById('empty-align-card');
+  var hod = document.getElementById('hod-card');
+  if (aboutIt && empty) {
+    empty.style.height = aboutIt.offsetHeight + 'px';
+  }
+  if (whyIt && hod) {
+    hod.style.height = whyIt.offsetHeight + 'px';
+  }
+}
+window.addEventListener('DOMContentLoaded', matchCardHeights);
+window.addEventListener('resize', matchCardHeights);
+</script>
 
       </div>
 
       <!-- Right Sidebar (30%) -->
-      <div class="col-md-4 p-3">
-
-        <div class="row border rounded bg-light mx-3 mx-3 justify-content-center">
-          <h3 class="py-3 text-center">News and Events</h3>
-          <div class="scroll-container mb-5">
-            <div class="scroll-text text-center">
-              <a href="" target="" class="nav-link">Graduation Ceremony 2025 </a>
-              <a href="" target="" class="nav-link">Alumni Meet  2025  </a>
-              <a href="" target="" class="nav-link">Department  Day 2025   </a>
-              <a href="/assets/CSI_planner2025.jpg" target="" class="nav-link">CSI Planner  2025  </a>
+      <div class="col-md-4 p-3"  style="height: 400px;">
+        <div id="sidebar-events-wrapper" style="gap: 1rem;">
+          <div class="row border rounded bg-light mx-3 justify-content-center">
+            <h3 class="py-3 text-center">News and Events</h3>
+            <div class="scroll-container mb-5">
+              <div class="scroll-viewport">
+                <div class="scroll-text text-center">
+                  <a href="" target="" class="nav-link blink-blue-gold">Yay!! We are now Autonomuous!</a>
+                  <a href="" target="" class="nav-link">BOS Meet 2025 </a>
+                  <a href="" target="" class="nav-link">Department  Day 2025   </a>
+                  <a href="/assets/CSI_planner2025.jpg" target="" class="nav-link">CSI Planner  2025  </a>
+                </div>
+              </div>
             </div>
-          </div>  
-        </div>
-
-        <div class="row border rounded bg-light mt-3 mx-3 justify-content-center" style="height: 300px">
-          <h3 class="py-3 text-center">Flagship Events</h3>
-          <div class="scroll-container mb-5">
-            <div class="scroll-text text-center">
-              <a href="/assets/slideshow/innovex.png" target="" class="nav-link">Innovex 2025</a>
+          </div>
+          <div class="row border rounded bg-light mx-3 justify-content-center mt-3"  style="height: 180px;">
+            <h3 class="py-3 text-center">Flagship Events</h3>
+            <div class="scroll-container mb-5">
+              <div class="scroll-viewport">
+                <div class="scroll-text text-center">
+                  <a href="/assets/slideshow/innovex.png" target="" class="nav-link">Innovex 2025</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Keep the two new cards below -->
+          <div id="news-extra-card" class="row border rounded mx-3 justify-content-center flex-grow-1 mt-3 highlights-card vision-mission-section">
+            <h4 class="mb-2"><i class="bi bi-eye-fill"></i> Vision</h4>
+            <p class="card-text">
+              1. To become a preferred choice for the students and recruiters.<br><br>
+              2. To be known for contributions towards Open Source Technology in the education domain.
+            </p>
+            <br><br><br>
+            <h4 class="mb-2"><i class="bi bi-bullseye"></i> Mission</h4>
+            <p class="card-text">
+              1. To provide a conducive environment for teaching-learning and research opportunities for the holistic growth of each individual.<br><br>
+              2. To develop expertise in training and application development in the education domain using Open Source Technology.
+            </p>
+          </div>
+          <div id="flagship-extra-card" class="row mx-3 justify-content-center flex-grow-1 mt-3">
+            <div class="modern-box-green w-100 d-flex flex-column justify-content-center align-items-center p-4">
+              <h4 class="text-center mb-3"><i class="bi bi-info-circle-fill"></i> About College</h4>
+              <p><strong>Don Bosco Institute of Technology (DBIT)</strong>, established in 2001, is located in Kurla (W), Mumbai. The institute is affiliated to the <strong>University of Mumbai</strong> and approved by <strong>AICTE</strong>.</p>
+              <p>DBIT aims to provide quality technical education with a focus on values, innovation, and holistic development. The campus offers modern infrastructure, skilled faculty, active student clubs, and excellent placement opportunities.</p>
+              <p>With a strong emphasis on research, entrepreneurship, and community engagement, DBIT has emerged as a preferred choice for engineering aspirants in Mumbai.</p>
+              <!-- <p class="text-center fw-bold"><i>DBIT – Shaping engineers, building futures.</i></p> -->
             </div>
           </div>
         </div>
-
       </div>
 
     </div>
@@ -188,6 +406,78 @@
   <!-- Footer -->
   <div id="footer"></div>
 
+  <script>
+  // Sidebar news/events smooth scroll pause/resume on hover
+  function setupSidebarScrollPause() {
+    document.querySelectorAll('.scroll-container').forEach(function(container) {
+      var scrollText = container.querySelector('.scroll-text');
+      if (!scrollText) return;
+      container.addEventListener('mouseenter', function() {
+        scrollText.classList.add('paused');
+      });
+      container.addEventListener('mouseleave', function() {
+        scrollText.classList.remove('paused');
+      });
+    });
+  }
+  window.addEventListener('DOMContentLoaded', setupSidebarScrollPause);
+  </script>
+
+  <script>
+  // Match new extra sidebar card heights to left main cards
+  function matchSidebarCardHeights() {
+    var aboutIt = document.getElementById('aboutit-card');
+    var whyIt = document.getElementById('whyit-card');
+    var news = document.getElementById('news-card');
+    var flagship = document.getElementById('flagship-card');
+    var newsExtra = document.getElementById('news-extra-card');
+    var flagshipExtra = document.getElementById('flagship-extra-card');
+    if (aboutIt && newsExtra) {
+      newsExtra.style.height = aboutIt.offsetHeight + 'px';
+    }
+    if (whyIt && flagshipExtra) {
+      flagshipExtra.style.height = whyIt.offsetHeight + 'px';
+    }
+    // Keep original matching for top cards if needed
+    if (aboutIt && news) {
+      news.style.height = aboutIt.offsetHeight + 'px';
+    }
+    if (whyIt && flagship) {
+      flagship.style.height = whyIt.offsetHeight + 'px';
+    }
+  }
+  window.addEventListener('DOMContentLoaded', matchSidebarCardHeights);
+  window.addEventListener('resize', matchSidebarCardHeights);
+  </script>
+
+  <script>
+  function matchHighlightsHeights() {
+    var aboutIt = document.getElementById('aboutit-card');
+    var left = document.getElementById('left-highlights-card');
+    var right = document.getElementById('news-extra-card');
+    if (aboutIt && left) {
+      left.style.height = aboutIt.offsetHeight + 'px';
+    }
+    if (aboutIt && right) {
+      right.style.height = aboutIt.offsetHeight + 'px';
+    }
+  }
+  window.addEventListener('DOMContentLoaded', matchHighlightsHeights);
+  window.addEventListener('resize', matchHighlightsHeights);
+  </script>
+
 </body>
 
 </html>
+
+<!--  -->
+<!--placement record 100 perc-->
+<!-- academic passed perctage 100-->
+ <!-- avegrae faculty experience - 15+ yrs -->
+<!-- group based learingn -->
+ <!-- holistice environment -->
+
+ <!-- left -->
+<!-- inteke -60 -->
+ <!-- degree - BE -->
+  <!-- accredetion - A -->
