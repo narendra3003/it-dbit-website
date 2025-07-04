@@ -44,3 +44,103 @@
     border-radius: 10px;
   }
   
+  /* Reusable Card Styles */
+  .custom-card {
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border: none;
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+  }
+  .framed-card {
+    --frame-color: #148a51;
+  }
+  .framed-card::before {
+    content: '';
+    position: absolute;
+    top: 10px; left: 10px; right: 10px; bottom: 10px;
+    border: 4px solid var(--frame-color);
+    border-radius: 14px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .card-content {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem 1.25rem;
+    background: #fff;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: justify;
+  }
+  .card-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #1a237e;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .card-text {
+    font-size: 1.08rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  @media (max-width: 768px) {
+    .card-title {
+      font-size: 1.2rem;
+    }
+    .card-text {
+      font-size: 0.98rem;
+    }
+  }
+  
+  .modern-box-green {
+    background: #fff;
+    /* border: 3px solid #fff; */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    color: #000;
+    margin-bottom: 2rem;
+  }
+  .modern-box-green::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    border: 6px solid #148a51;
+    border-radius: 14px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .modern-box-green > * {
+    position: relative;
+    z-index: 2;
+  }
+  .modern-box-green h4 {
+    color: #148a51;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .modern-box-green p {
+    color: #222;
+    font-size: 1.08rem;
+    text-align: justify;
+    margin-bottom: 0.7rem;
+  }
+  @media (max-width: 768px) {
+    .modern-box-green {
+      padding: 1.2rem;
+    }
+  }
+  
